@@ -1,0 +1,69 @@
+﻿
+.heading, .borrow-btn-section, .input-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.heading {
+    text-align: center;
+    position: relative;
+}
+
+.input-section {
+    height: 60px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.borrow-btn-section {
+    width: 18%;
+}
+
+.submit {
+    border: none;
+}
+
+.web-text {
+    width: 40rem;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 75% !important;
+    height: 250px;
+    margin: auto;
+}
+
+.back-main {
+    width: 160px;
+    height: 20px;
+    display: inline-flex;
+    background-color: darkgray;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+}
+
+.graph-container {
+    width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.site-header, .no-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.site-header {
+    font-size: 35px;
+}

@@ -1,0 +1,67 @@
+﻿@model WebsiteDataCounter.Models.WebsiteCouner.WebsiteCountResult
+@{
+    ViewBag.Title = "WebsiteContentCountResult";
+    Layout = "~/Views/WebsiteCounter/Layout/MasterLayout.cshtml";
+}
+@Scripts.Render("https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+@Scripts.Render("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js")
+
+<div class="site-header">
+    @Html.Label("Word Count in Website") @Model.WebsiteURL @Html.Raw("  : ")
+    @Html.LabelForModel(Model.WordCount.ToString(), new { @class = "book-content" })
+</div>
+<div class="carousel-container">
+    @if (Model.ImageUrl != null)
+    {
+        <div class="container">
+            <br>
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox" id="carouselInner">
+
+
+                    @foreach (string imgSrc in Model.ImageUrl)
+                    {
+                        <div class="item">
+                            <img alt="" src=@imgSrc />
+                        </div>
+                    }
+
+                </div>
+
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </div>
+    }
+    else
+    {
+        <span class="no-image"> @Html.Raw(" Their are no image in the site ")</span>
+    }
+</div>
+
+<div class="graph-container">
+    <img src="@Url.Action("DisplayGraph","WebsiteContentCounter", new { websiteUrl = Model.WebsiteURL})" />
+</div>
+
+<div class="button">
+    @Html.ActionLink("Back", "WebsiteData", "WebsiteContentCounter", null, new { @class = "back-main" })
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#carouselInner div:first-child').addClass('active');
+    });
+</script>

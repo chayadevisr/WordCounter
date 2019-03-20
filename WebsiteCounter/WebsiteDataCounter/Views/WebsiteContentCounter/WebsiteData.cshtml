@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Counter";
+    Layout = "~/Views/WebsiteCounter/Layout/MasterLayout.cshtml";
+}
+
+<div class="heading"><h2>Webiste Word counter</h2></div>
+@model WebsiteDataCounter.Models.WebsiteCouner.WebsiteData
+
+@using (Html.BeginForm("WebsiteContentCountResult", "WebsiteContentCounter"))
+{
+
+    @Html.ValidationSummary(true)
+    <div class="input-section">
+        @Html.Label("WebSite URL", new { @class = "web-label" }) @Html.Raw(" : ")
+        @Html.TextBoxFor(m => m.WebsiteURL, null, new { @placeholder = "Please enter website url", @class = "web-text" })
+        @Html.ValidationMessageFor(m => m.WebsiteURL, string.Empty,
+               new { @class="required-msgblock" })
+    </div>
+    <hr />
+    <div class="borrow-btn-section">
+        <input type="submit" id="btnSubmitWebsiteUrl" value="GetWebSite Result" class="submit" />
+    </div>
+}

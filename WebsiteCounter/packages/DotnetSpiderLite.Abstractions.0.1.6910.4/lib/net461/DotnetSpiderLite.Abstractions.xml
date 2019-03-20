@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotnetSpiderLite.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:DotnetSpiderLite.DownloaderCookieContainer">
+            <summary>
+             默认cookie 容器
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.DownloaderException">
+            <summary>
+             Exception
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Downloader.BaseDownloader">
+            <summary>
+             抽象类下载器
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Downloader.BaseDownloader.AddDownloadBeforeHandle(DotnetSpiderLite.Downloader.IDownloadBeforeHandle)">
+            <summary>
+             添加前置处理
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Downloader.BaseDownloader.AddDownloadAfterHandle(DotnetSpiderLite.Downloader.IDownloadAfterHandle)">
+            <summary>
+             添加后置处理
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.Downloader.IDownloadAfterHandle">
+            <summary>
+             下载器后置处理 
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Downloader.IDownloadBeforeHandle">
+            <summary>
+             下载器前置处理 
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Downloader.IDownloader">
+            <summary> 
+             定义一个下载器 <see cref="T:DotnetSpiderLite.Downloader.IDownloader"/>
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.IIdentity">
+            <summary>
+             identity 
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.IIdentity.Identity">
+            <summary>
+            Identity
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Logs.ILogger">
+            <summary>
+             定义 logger 
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Logs.ILoggerFactory">
+            <summary>
+             获取 ILogger 
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Logs.LoggerExtensions">
+            <summary>
+             扩展
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Logs.LogLevel">
+            <summary>
+            Defines logging severity levels.
+            </summary>
+        </member>
+        <member name="F:DotnetSpiderLite.Logs.LogLevel.Trace">
+            <summary>
+            Logs that contain the most detailed messages. These messages may contain sensitive application data.
+            These messages are disabled by default and should never be enabled in a production environment.
+            </summary>
+        </member>
+        <member name="F:DotnetSpiderLite.Logs.LogLevel.Debug">
+            <summary>
+            Logs that are used for interactive investigation during development.  These logs should primarily contain
+            information useful for debugging and have no long-term value.
+            </summary>
+        </member>
+        <member name="F:DotnetSpiderLite.Logs.LogLevel.Info">
+            <summary>
+            Logs that track the general flow of the application. These logs should have long-term value.
+            </summary>
+        </member>
+        <member name="F:DotnetSpiderLite.Logs.LogLevel.Warn">
+            <summary>
+            Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the
+            application execution to stop.
+            </summary>
+        </member>
+        <member name="F:DotnetSpiderLite.Logs.LogLevel.Error">
+            <summary>
+            Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a
+            failure in the current activity, not an application-wide failure.
+            </summary>
+        </member>
+        <member name="F:DotnetSpiderLite.Logs.LogLevel.None">
+            <summary>
+            Not used for writing log messages. Specifies that a logging category should not write any messages.
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Page">
+            <summary>
+             表示一个页面体
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.Selector">
+            <summary>
+             解析器
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.Response">
+            <summary>
+             HTTP 响应
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.Content">
+            <summary>
+             页面字符串内容
+            </summary> 
+        </member>
+        <member name="P:DotnetSpiderLite.Page.Skip">
+            <summary>
+             是否跳过
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.Retry">
+            <summary>
+             是否重试
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.MaxRetryTimes">
+            <summary>
+             重试最大次数，0始终重试
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.ResutItems">
+            <summary>
+             结果数据
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.Extra">
+            <summary>
+             扩展信息
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Page.TargetRequests">
+            <summary>
+             新的目标请求
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Page.GetResponseString">
+            <summary>
+             获取Response的字符串内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotnetSpiderLite.Page.AddTargetRequest(System.String,System.String)">
+            <summary>
+             添加新的请求
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Page.AddTargetRequest(DotnetSpiderLite.Request)">
+            <summary>
+             添加新的请求
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Page.AddResultItem(System.String,System.Object)">
+            <summary>
+             添加数据结果
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Page.SetSelector(DotnetSpiderLite.Html.IHtmlElementSelector)">
+            <summary>
+             设置页面解析器
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.PageProcessor.BasePageProcessor">
+            <summary>
+             页面处理器抽象类
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.PageProcessor.IPageProcessor">
+            <summary>
+             页面处理器 <see cref="T:DotnetSpiderLite.PageProcessor.IPageProcessor"/>
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.PageProcessor.IPageProcessor.CanProcess(DotnetSpiderLite.Page)">
+            <summary>
+             是否允许当前处理器处理页面
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.PageProcessor.IPageProcessor.Process(DotnetSpiderLite.Page)">
+            <summary>
+             处理
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Pipeline.BasePipeline.Dispose">
+            <summary>
+             dispose when you need.
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Pipeline.IPipeline">
+            <summary>
+             数据管道
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Request">
+            <summary>
+             表示 HTTP 请求
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Referer">
+            <summary>
+             Referer
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Encoding">
+            <summary>
+             编码。默认 UTF8
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Method">
+            <summary>
+             默认Get
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Uri">
+            <summary>
+             请求URI
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Body">
+            <summary>
+             请求BODY，一般用于post等请求
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Headers">
+            <summary>
+             header 头
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.Extra">
+            <summary>
+             扩展
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Request.CookieContainer">
+            <summary>
+             Cookies 集合容器
+            </summary> 
+        </member>
+        <member name="P:DotnetSpiderLite.Request.CookieHeader">
+            <summary>
+             CookieHeader
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Request.AddCookie(System.String,System.String)">
+            <summary>
+             添加 cookie
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Request.AddCookie(System.Net.Cookie)">
+            <summary>
+             添加 cookie
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.Response">
+            <summary>
+             表示 HTTP 响应
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.Request">
+            <summary>
+             HTTP 请求
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.ResponseUri">
+            <summary>
+             响应URI
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.Body">
+            <summary>
+             响应 body 内容
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.ContentType">
+            <summary>
+             ContentType
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.StatusCode">
+            <summary>
+             响应状态码
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.ContentLength">
+            <summary>
+             响应内容长度
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.Extra">
+            <summary>
+             扩展
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Response.ResponseCookies">
+            <summary>
+             响应 cookies 集合
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.ResultItems">
+            <summary>
+             页面解析的数据结果
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.ResultItems.Page">
+            <summary>
+             来源页面
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Scheduler.IScheduler">
+            <summary>
+             队列
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Scheduler.IScheduler.Push(DotnetSpiderLite.Request)">
+            <summary>
+             放进一个
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:DotnetSpiderLite.Scheduler.IScheduler.Pull">
+            <summary>
+             拉取一个
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DotnetSpiderLite.Scheduler.ISchedulerDuplicateRemover">
+            <summary>
+             队列去重器
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Scheduler.ISchedulerDuplicateRemover.IsDuplicate(DotnetSpiderLite.Request)">
+            <summary>
+             是否重复请求
+            </summary>
+            <param name="request"></param>
+            <returns>true 为重复请求</returns>
+        </member>
+        <member name="M:DotnetSpiderLite.Scheduler.ISchedulerDuplicateRemover.ResetDuplicateCheck">
+            <summary>
+             重置去重器
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Scheduler.ISchedulerMonitor">
+            <summary>
+             队列 监控
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Scheduler.ISchedulerMonitor.LeftRequestsCount">
+            <summary>
+            剩余链接数
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Scheduler.ISchedulerMonitor.TotalRequestsCount">
+            <summary>
+            总的链接数
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Scheduler.ISchedulerMonitor.SuccessRequestsCount">
+            <summary>
+            采集成功的链接数
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Scheduler.ISchedulerMonitor.ErrorRequestsCount">
+            <summary>
+            采集失败的次数, 不是链接数, 如果一个链接采集多次都失败会记录多次
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Scheduler.ISchedulerMonitor.IncreaseSuccessCount">
+            <summary>
+            采集成功的链接数加 1
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Scheduler.ISchedulerMonitor.IncreaseErrorCount">
+            <summary>
+            采集失败的次数加 1
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.SpiderException">
+            <summary>
+             Exception
+            </summary>
+        </member>
+        <member name="T:DotnetSpiderLite.Html.IHtmlElement">
+            <summary>
+             表示一个 html 元素节点
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.Children">
+            <summary>
+             子元素
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.InnerHtml">
+            <summary>
+             内HTML
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.OuterHtml">
+            <summary>
+             HTML 包含自己
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.InnerText">
+            <summary>
+             text 文本
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.TagName">
+            <summary>
+             TagName
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.ClassName">
+            <summary>
+             class 
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.ID">
+            <summary>
+             id
+            </summary>
+        </member>
+        <member name="P:DotnetSpiderLite.Html.IHtmlElement.Attributes">
+            <summary>
+             属性
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Html.IHtmlElement.GetAttribute(System.String)">
+            <summary>
+             获取属性值
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.Html.IHtmlElementSelector">
+            <summary>
+             html 查询器
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Html.IHtmlElementSelector.SelectorAll(System.String,DotnetSpiderLite.Html.HtmlSelectorPathType)">
+            <summary>
+             查询所有
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Html.IHtmlElementSelector.Selector(System.String,DotnetSpiderLite.Html.HtmlSelectorPathType)">
+            <summary>
+             查询一个
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.Html.IHtmlElementSelectorFactory">
+            <summary>
+             获取 html 查询器
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.Html.IHtmlQuery">
+            <summary>
+             Html 查询
+            </summary>
+        </member>
+        <member name="M:DotnetSpiderLite.Html.IHtmlQuery.SelectorAll(System.String,System.String,DotnetSpiderLite.Html.HtmlSelectorPathType)">
+            <summary>
+             查询所有
+            </summary> 
+        </member>
+        <member name="M:DotnetSpiderLite.Html.IHtmlQuery.Selector(System.String,System.String,DotnetSpiderLite.Html.HtmlSelectorPathType)">
+            <summary>
+             查询一个
+            </summary> 
+        </member>
+        <member name="T:DotnetSpiderLite.Html.HtmlSelectorPathType">
+            <summary>
+             查询路径类型
+            </summary>
+        </member>
+    </members>
+</doc>

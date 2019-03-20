@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Chart>
+  <ChartAreas>
+    <ChartArea Name="Default" _Template_="All">
+      <AxisX Interval="1">       
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+  <Series>
+    <Series Name="Top 10 word count" BorderWidth="3" >
+    </Series>
+  </Series>
+  <Legends>
+    <Legend Alignment="Center" Docking="Top" Name="Top 10 word count">
+    </Legend>
+  </Legends>
+</Chart>
