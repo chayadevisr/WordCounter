@@ -1,9 +1,9 @@
 using System.Web.Mvc;
 using Unity;
 using Unity.Mvc5;
-using WebsiteDataCounter.Data.WebsiteCounter;
+using WebsiteContentReader.Data.ContentReader;
 
-namespace WebsiteDataCounter
+namespace WebsiteContentReader
 {
     public static class UnityConfig
     {
@@ -15,7 +15,7 @@ namespace WebsiteDataCounter
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
-            container.RegisterType<IWebsiteContentCounterRepository, WebsiteContentCounterRepository>();
+            container.RegisterType<IWebsiteContentReaderRepository, WebsiteContentReaderRepository>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

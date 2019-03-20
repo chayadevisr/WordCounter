@@ -5,15 +5,20 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace WebsiteDataCounter
+namespace WebsiteContentReader
 {
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.MapRoute("WebsiteContentCounter", "WebsiteContentCounter", new { controller = "WebsiteContentCounter", action = "WebsiteData" });
+            routes.MapRoute("WebsiteContentCounter", "WebsiteContentCounter", new { controller = "WebsiteContentReader", action = "WebsiteData" });
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            //);
 
             routes.MapRoute(
                 name: "Default",

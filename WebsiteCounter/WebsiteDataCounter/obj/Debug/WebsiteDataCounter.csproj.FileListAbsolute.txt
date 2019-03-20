@@ -98,7 +98,6 @@ D:\Chaya\Sample Project\WebsiteCounter\WebsiteDataCounter\obj\Debug\WebsiteDataC
 D:\Chaya\Sample Project\WebsiteCounter\WebsiteDataCounter\obj\Debug\WebsiteDataCounter.dll
 D:\Chaya\Sample Project\WebsiteCounter\WebsiteDataCounter\obj\Debug\WebsiteDataCounter.pdb
 D:\Chaya\Sample Project\WebsiteCounter\WebsiteDataCounter\obj\Debug\WebsiteDataCounter.csprojAssemblyReference.cache
-D:\Chaya\GitRepo\WebsiteCounter\WebsiteDataCounter\bin\ApplicationInsights.config
 D:\Chaya\GitRepo\WebsiteCounter\WebsiteDataCounter\bin\WebsiteDataCounter.dll.config
 D:\Chaya\GitRepo\WebsiteCounter\WebsiteDataCounter\bin\WebsiteDataCounter.dll
 D:\Chaya\GitRepo\WebsiteCounter\WebsiteDataCounter\bin\WebsiteDataCounter.pdb

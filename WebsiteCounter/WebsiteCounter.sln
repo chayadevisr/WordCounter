@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentApi", "ContentApi\ContentApi.csproj", "{673F389D-179C-496D-B3BF-1776C7560E16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteDataCounter", "WebsiteDataCounter\WebsiteDataCounter.csproj", "{729CE4DF-5931-4771-90DC-A9C53E9E6203}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteContentReader", "WebsiteDataCounter\WebsiteContentReader.csproj", "{729CE4DF-5931-4771-90DC-A9C53E9E6203}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

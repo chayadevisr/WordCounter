@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace WebsiteDataCounter
+namespace WebsiteContentReader
 {
     public class BundleConfig
     {
