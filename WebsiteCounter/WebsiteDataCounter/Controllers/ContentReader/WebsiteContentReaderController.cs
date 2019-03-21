@@ -107,7 +107,6 @@ namespace WebsiteContentReader.Controllers.ContentReader
         /// <returns>ActionResult</returns>
         public ActionResult DisplayGraph(string websiteUrl)
         {
-            if (!string.IsNullOrEmpty(websiteUrl)) { }
             Dictionary<string, int> topWordList = !string.IsNullOrEmpty(websiteUrl)?
                 this.WebsiteContentReaderRepository.GetWebsiteContent(websiteUrl).TopWordCount 
                 : new Dictionary<string, int>();
