@@ -107,7 +107,10 @@ namespace WebsiteContentReader.Controllers.ContentReader
         /// <returns>ActionResult</returns>
         public ActionResult DisplayGraph(string websiteUrl)
         {
-            Dictionary<string, int> topWordList = this.WebsiteContentReaderRepository.GetWebsiteContent(websiteUrl).TopWordCount;
+            if (!string.IsNullOrEmpty(websiteUrl)) { }
+            Dictionary<string, int> topWordList = !string.IsNullOrEmpty(websiteUrl)?
+                this.WebsiteContentReaderRepository.GetWebsiteContent(websiteUrl).TopWordCount 
+                : new Dictionary<string, int>();
             List<string> xVal = new List<string>();
             List<string> yVal = new List<string>();
             var sortedDict = (from entry in topWordList

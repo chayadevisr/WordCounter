@@ -50,7 +50,7 @@ namespace WebsiteContentReader.Data.ContentReader
                 }
                 else
                 {
-                    throw new Exception("Error while fecting Owner data from API" + portalResponse.Content.ReadAsStringAsync().Result);
+                    return new WebsiteCountResult();
                 }
             }
         }
