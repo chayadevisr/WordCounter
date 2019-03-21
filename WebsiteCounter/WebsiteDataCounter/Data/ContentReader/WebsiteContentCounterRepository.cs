@@ -18,14 +18,6 @@ namespace WebsiteContentReader.Data.ContentReader
         /// <returns></returns>
         public WebsiteCountResult GetWebsiteContent(string websiteURL)
         {
-            if (websiteURL.StartsWith("www"))
-            {
-                websiteURL = string.Concat("http://", websiteURL);
-            }
-            else
-            {
-                websiteURL = (Regex.IsMatch(websiteURL, "https?://.*")) ? websiteURL : string.Concat("http://", websiteURL);
-            }
             WebsiteCountResult websiteContentCountResult = new WebsiteCountResult();
             websiteContentCountResult.WebsiteURL = websiteURL;
 
